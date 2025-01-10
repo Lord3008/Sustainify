@@ -6,6 +6,7 @@ An umbrella initiative that ensures the following facilities:
 
 -**Transport Optimization** : The Transport route is optimized using Graph Neural Networks.
 <img src="https://github.com/Lord3008/Sustainify/blob/main/Output_Images/output_1.png" alt="Weighted graph showing traffic" width="900" height="600">
+For optimizing the transport, I have considered various factors like the traffic congestion, condition of roads, presence of fog or haze etc. Moreover we can also add a parameter of safety in it  to extend it for women safety. At final stage the project aims to cover that too. 
 - 🌬️**Air**: **Model to help the city predict the AQI value and do trend analysis** and suggest necessary measures for improving air quality.
 - ⚡**Energy** **Model to predict future energy usage of a country** and assist in the resource planning of the country. In Suatainability bites we call it smart energy management.
 
