@@ -58,7 +58,11 @@ The transport route optimization system leverages **Graph Neural Networks (GNNs)
 - Dedicated safe routes for vulnerable populations.
 
 **Visualization**:  
+<<<<<<< HEAD
 <img src="https://github.com/Lord3008/Sustainify/blob/main/Output_Images/Trasnsport_traffic_Graph.png" alt="Weighted graph showing traffic" width="900" height="600">  
+=======
+<img src="https://github.com/Lord3008/Sustainify/blob/main/Output_Images/Transport_traffic_Graph.png" alt="Weighted graph showing traffic" width="900" height="600">  
+>>>>>>> 2a69191089f4a9acbff92f8e96d1325475331537
 The graph visualization highlights traffic congestion levels, road conditions, and other factors, showcasing the real-time decision-making capabilities of the system.  
 
 This approach not only optimizes transport but also sets a foundation for broader applications, including sustainability and safety, aligning with smart city initiatives.
