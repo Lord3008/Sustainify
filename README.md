@@ -4,7 +4,7 @@ An umbrella initiative that ensures the following facilities:
 
 -🍽️ **Food** :  **Gateway between restaurants and food donors** to manage surplus food and a model to predict the amount of surplus food left in resturant. So, that it can be distributed amog the foodless people by social activists at a low price.
 
-### Transport Optimization with Graph Neural Networks  
+### Transport Optimization with Graph Neural Networks    
 
 **Overview**:  
 The transport route optimization system leverages **Graph Neural Networks (GNNs)** to identify the most efficient and safe routes for transportation. The approach integrates diverse parameters such as **traffic congestion**, **road conditions**, **weather conditions (e.g., fog or haze)**, and extends to include **safety metrics**, making it suitable for applications like **women's safety**.  
