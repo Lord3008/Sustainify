@@ -15,7 +15,7 @@ The project aims to make an umbrella city planning model that will help the auth
 **C. Business Owener's POV:**
 1. Manage the surplus food in restruants to decrease leftover food and increase profit
 
-**Solutions:**
+## Solutions:
 
 **A: Solutions to the problem of Residents:**
 
