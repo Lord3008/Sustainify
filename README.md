@@ -16,7 +16,9 @@ The project aims to make an umbrella city planning model that will help the auth
 1. Manage the surplus food in restruants to decrease leftover food and increase profit
 
 **Solutions:**
+
 **A: Solutions to the problem of Residents:**
+
 An umbrella initiative that ensures the following facilities:
 
 -🍽️ **Food** :  **Gateway between restaurants and food donors** to manage surplus food and a model to predict the amount of surplus food left in resturant. So, that it can be distributed amog the foodless people by social activists at a low price. This will solve the problem of Food sortage.
