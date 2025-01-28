@@ -1,7 +1,19 @@
 # Sustainify 🌱🍴🌍
 The project aims to make an umbrella city planning model that will help the authorities, citizens to live and manage the situations in an optimal way. First we need to identify the problems that we face as a rewsident and as an authority who is supposed to manage the city.
 
-** Problems:**
+**Problems:**
+**A. Resident's POV:**
+1. Huge traffic in roads
+2. Safety of women in roads
+3. Deficiency of food for the poor
+
+**B. Authority's POV:**
+1. Increasing Air pollution
+2. How to manage the resources
+3. Ensuring trust and safety in road System
+
+**C. Business Owener's POV:**
+1. Manage the surplus food in restruants to decrease leftover food and increase profit
 
 An umbrella initiative that ensures the following facilities:
 
