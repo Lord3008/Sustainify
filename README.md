@@ -1,10 +1,29 @@
 # Sustainify 🌱🍴🌍
+The project aims to make an umbrella city planning model that will help the authorities, citizens to live and manage the situations in an optimal way. First we need to identify the problems that we face as a rewsident and as an authority who is supposed to manage the city.
+
+**Problems:**
+**A. Resident's POV:**
+1. Huge traffic in roads
+2. Safety of women in roads
+3. Deficiency of food for the poor
+
+**B. Authority's POV:**
+1. Increasing Air pollution
+2. How to manage the resources
+3. Ensuring trust and safety in road System
+
+**C. Business Owener's POV:**
+1. Manage the surplus food in restruants to decrease leftover food and increase profit
+
+## Solutions:
+
+**A: Solutions to the problem of Residents:**
 
 An umbrella initiative that ensures the following facilities:
 
--🍽️ **Food** :  **Gateway between restaurants and food donors** to manage surplus food and a model to predict the amount of surplus food left in resturant. So, that it can be distributed amog the foodless people by social activists at a low price.
+-🍽️ **Food** :  **Gateway between restaurants and food donors** to manage surplus food and a model to predict the amount of surplus food left in resturant. So, that it can be distributed amog the foodless people by social activists at a low price. This will solve the problem of Food sortage.
 
-### Transport Optimization with Graph Neural Networks  
+### Transport Optimization with Graph Neural Networks    
 
 **Overview**:  
 The transport route optimization system leverages **Graph Neural Networks (GNNs)** to identify the most efficient and safe routes for transportation. The approach integrates diverse parameters such as **traffic congestion**, **road conditions**, **weather conditions (e.g., fog or haze)**, and extends to include **safety metrics**, making it suitable for applications like **women's safety**.  
@@ -63,6 +82,7 @@ The graph visualization highlights traffic congestion levels, road conditions, a
 
 This approach not only optimizes transport but also sets a foundation for broader applications, including sustainability and safety, aligning with smart city initiatives.
 
+**B: Solution to the problem of authorities:**
 -🌬️**Air**: **Model to help the city predict the AQI value and do trend analysis** and suggest necessary measures for improving air quality.
 
 - ⚡**Energy** **Model to predict future energy usage of a country** and assist in the resource planning of the country. In Suatainability bites we call it smart energy management.
