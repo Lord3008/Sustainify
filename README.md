@@ -19,7 +19,7 @@ The project aims to make an umbrella city planning model that will help the auth
 
 **A: Solutions to the problem of Residents:**
 1. Huge traffic in roads:
-   a. Traffic Conjestion Detection
+   a. Traffic Conjestion Detection "\n"
    b. Optimized Route Prediction
 An umbrella initiative that ensures the following facilities:
 
