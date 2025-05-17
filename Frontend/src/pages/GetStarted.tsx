@@ -30,7 +30,7 @@ const GetStarted = () => {
                   Connect with urban markets, learn sustainable farming techniques, and get support from a community of like-minded farmers.
                 </p>
                 <Button asChild className="bg-sustainify-green hover:bg-sustainify-green/90 w-full">
-                  <Link to="/farmer-signup">Continue as Farmer</Link>
+                  <Link to="https://krushisaathi.vercel.app/landing">Continue as Farmer</Link>
                 </Button>
               </CardContent>
             </Card>
