@@ -1,0 +1,103 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 60 30% 98%;
+    --foreground: 142 76% 9%;
+
+    --card: 60 30% 98%;
+    --card-foreground: 142 76% 9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 142 76% 9%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 37 92% 50%;
+    --secondary-foreground: 142 76% 9%;
+
+    --muted: 60 10% 96%;
+    --muted-foreground: 142 5% 45%;
+
+    --accent: 37 92% 95%;
+    --accent-foreground: 142 76% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 142 5% 90%;
+    --input: 142 5% 90%;
+    --ring: 142 76% 36%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 142 76% 9%;
+    --foreground: 60 30% 98%;
+
+    --card: 142 76% 9%;
+    --card-foreground: 60 30% 98%;
+
+    --popover: 142 76% 9%;
+    --popover-foreground: 60 30% 98%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 142 76% 9%;
+
+    --secondary: 37 92% 50%;
+    --secondary-foreground: 60 30% 98%;
+
+    --muted: 142 5% 20%;
+    --muted-foreground: 142 5% 65%;
+
+    --accent: 37 92% 20%;
+    --accent-foreground: 60 30% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 142 5% 20%;
+    --input: 142 5% 20%;
+    --ring: 142 76% 36%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+  }
+}
+
+.hero-gradient {
+  background: linear-gradient(90deg, rgba(76, 175, 80, 0.05) 0%, rgba(139, 195, 74, 0.2) 100%);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
