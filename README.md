@@ -18,7 +18,10 @@ The project aims to make an umbrella city planning model that will help the auth
 ## Solutions:
 
 **A: Solutions to the problem of Residents:**
-
+1. Huge traffic in roads:
+   a. Traffic Conjestion Detection
+   
+   b. Optimized Route Prediction
 An umbrella initiative that ensures the following facilities:
 
 -🍽️ **Food** :  **Gateway between restaurants and food donors** to manage surplus food and a model to predict the amount of surplus food left in resturant. So, that it can be distributed amog the foodless people by social activists at a low price. This will solve the problem of Food sortage.
