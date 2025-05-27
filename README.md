@@ -1,7 +1,11 @@
-# Sustainify 🌱🍴🌍
+# Sustainify: Krushi & City 🌱🍴🌍
 The project aims to make an umbrella city planning model that will help the authorities, citizens to live and manage the situations in an optimal way. First we need to identify the problems that we face as a rewsident and as an authority who is supposed to manage the city.
 
-**Problems:**
+**Problems of Krushi:**
+1. Lack of proper information
+2. Miscommunication across authority and vilagers.
+
+**Problems of City:**
 **A. Resident's POV:**
 1. Huge traffic in roads
 2. Safety of women in roads
