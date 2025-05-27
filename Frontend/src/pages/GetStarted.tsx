@@ -43,7 +43,7 @@ const GetStarted = () => {
                   Access fresh produce directly from farmers, participate in urban gardening initiatives, and learn about sustainable living.
                 </p>
                 <Button asChild className="bg-sustainify-brown hover:bg-sustainify-brown/90 w-full">
-                  <Link to="/citizen-signup">Continue as Citizen</Link>
+                  <Link to="https://sustainify-city.vercel.app/">Continue as Citizen</Link>
                 </Button>
               </CardContent>
             </Card>
