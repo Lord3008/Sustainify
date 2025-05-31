@@ -3,7 +3,12 @@ import streamlit as st
 import numpy as np
 from google import genai
 
-client = genai.Client(api_key="AIzaSyBfpSy8Z58lhAN2nZI8aV8fwS01RRb_N78")
+import os
+from dotenv import load_dotenv
+load_dotenv()
+gemini_api_key = os.getenv("GEMINI_API_KEY")
+
+client = genai.Client(api_key=gemini_api_key)
 
 class AQIAgent:
     def __init__(self):
