@@ -1,101 +1,139 @@
 # Sustainify: Krushi & City 🌱🍴🌍
-The project aims to make an umbrella city planning model that will help the authorities, citizens to live and manage the situations in an optimal way. First we need to identify the problems that we face as a rewsident and as an authority who is supposed to manage the city.
 
-**Problems of Krushi:**
-1. Lack of proper information
-2. Miscommunication across authority and vilagers.
+Sustainify is an integrated city planning model designed to empower authorities and citizens to manage urban and rural challenges optimally. The project identifies key issues faced by residents, authorities, and business owners, and proposes innovative, data-driven solutions for a sustainable future.
 
-**Problems of City:**
-**A. Resident's POV:**
-1. Huge traffic in roads
-2. Safety of women in roads
-3. Deficiency of food for the poor
+---
 
-**B. Authority's POV:**
-1. Increasing Air pollution
-2. How to manage the resources
-3. Ensuring trust and safety in road System
+## Identified Problems
 
-**C. Business Owener's POV:**
-1. Manage the surplus food in restruants to decrease leftover food and increase profit
+### Krushi (Rural)
 
-## Solutions:
+- Lack of proper information
+- Miscommunication between authorities and villagers
 
-**A: Solutions to the problem of Residents:**
-1. Huge traffic in roads:
-   a. Traffic Conjestion Detection
-   
-   b. Optimized Route Prediction
-An umbrella initiative that ensures the following facilities:
+### City
 
--🍽️ **Food** :  **Gateway between restaurants and food donors** to manage surplus food and a model to predict the amount of surplus food left in resturant. So, that it can be distributed amog the foodless people by social activists at a low price. This will solve the problem of Food sortage.
+#### A. Resident's Perspective
 
-### Transport Optimization with Graph Neural Networks    
+- Severe road traffic congestion
+- Safety concerns for women on roads
+- Food deficiency among the underprivileged
 
-**Overview**:  
-The transport route optimization system leverages **Graph Neural Networks (GNNs)** to identify the most efficient and safe routes for transportation. The approach integrates diverse parameters such as **traffic congestion**, **road conditions**, **weather conditions (e.g., fog or haze)**, and extends to include **safety metrics**, making it suitable for applications like **women's safety**.  
+#### B. Authority's Perspective
 
-**Key Features**:  
-1. **Graph Representation**:  
-   - The transport network is modeled as a **weighted graph**, where:
-     - **Nodes** represent key locations or intersections.
-     - **Edges** represent the roads connecting these locations, weighted by various factors like traffic, road quality, and weather conditions.
+- Rising air pollution
+- Resource management challenges
+- Ensuring trust and safety in road systems
 
-2. **Graph Neural Network (GNN) Framework**:  
-   - A **Graph Convolutional Network (GCN)** is employed to process the graph data, learning the optimal path by aggregating information from neighboring nodes and edges.
-   - **Edge weights** are dynamically adjusted based on real-time data from IoT sensors and traffic monitoring systems.
+#### C. Business Owner's Perspective
 
-3. **Parameters for Optimization**:  
-   - **Traffic Congestion**: Derived from real-time traffic data to prioritize less congested routes.
-   - **Road Conditions**: Assessed using IoT sensors and road quality indices.
-   - **Weather Conditions**: Integrated via APIs that provide real-time weather updates.
-   - **Safety Metrics**: Includes data like accident history, presence of streetlights, and police station proximity. This makes the system particularly effective for **women's safety** and other vulnerable populations.
+- Managing surplus food in restaurants to reduce waste and increase profit
 
-4. **Model Training**:  
-   - The model is trained on historical data to predict optimal routes under various conditions.
-   - Features include **road safety indices**, **average travel time**, and **historical traffic patterns**.
+---
 
-5. **Dynamic Path Updates**:  
-   - Uses reinforcement learning (RL) alongside GNN to dynamically adjust the routes based on changing conditions, such as unexpected traffic jams or weather changes.
+## Solutions
 
-**Technical Workflow**:  
-1. **Data Collection**:  
-   - Real-time data from IoT devices, traffic cameras, and APIs for weather and safety.
-2. **Graph Construction**:  
-   - Generate a weighted graph from collected data.
-3. **Model Development**:  
-   - Use **PyTorch Geometric** or **DGL (Deep Graph Library)** to implement the GNN.
-   - Incorporate a **reinforcement learning agent** to fine-tune edge weights based on reward functions like minimized travel time or maximized safety.
-4. **Prediction and Routing**:  
-   - Predict the optimal route using the trained GNN model.
-   - Integrate results into a user-friendly application interface.
+### A. For Residents
 
-**Extending for Women's Safety**:  
-- A **dedicated safety score** is calculated for each route using data like:
-  - **Crime rate in the area**.
-  - **Lighting conditions**.
-  - **Public transport availability**.
-  - **Proximity to emergency services**.  
-- The system prioritizes routes with higher safety scores for female travelers, ensuring not just efficiency but also safety.
+#### 1. Traffic Congestion
 
-**Applications**:  
-- Optimized transportation in urban areas.
-- Emergency route planning during natural disasters.
-- Dedicated safe routes for vulnerable populations.
+- **Traffic Congestion Detection**
+- **Optimized Route Prediction**
 
-**Visualization**:  
-<img src="https://github.com/Lord3008/Sustainify/blob/main/Output_Images/Transport_traffic_Graph.png" alt="Weighted graph showing traffic" width="900" height="600">  
-The graph visualization highlights traffic congestion levels, road conditions, and other factors, showcasing the real-time decision-making capabilities of the system.  
+#### 2. Food Security
 
-This approach not only optimizes transport but also sets a foundation for broader applications, including sustainability and safety, aligning with smart city initiatives.
+- **Food Gateway:**  
+  A platform connecting restaurants and food donors to manage surplus food. Predictive models estimate surplus food, enabling distribution to the needy via social activists at affordable prices, addressing food shortages.
 
-**B: Solution to the problem of authorities:**
--🌬️**Air**: **Model to help the city predict the AQI value and do trend analysis** and suggest necessary measures for improving air quality.
+---
 
-- ⚡**Energy** **Model to predict future energy usage of a country** and assist in the resource planning of the country. In Suatainability bites we call it smart energy management.
+### Transport Optimization with Graph Neural Networks
 
-🏆 **Best MathWorks Award by MLH and MathWorks in HackNITR 5.0** for the project under the name **Sustainability Bites**.
+**Overview:**  
+A transport route optimization system leveraging **Graph Neural Networks (GNNs)** to identify efficient and safe routes. The system integrates parameters such as traffic congestion, road conditions, weather, and safety metrics, with a special focus on women's safety.
 
-# Impact 🌟
+#### Key Features
 
-The project **Sustainify** aims to significantly reduce food waste, improve air quality, and enhance energy planning, contributing to a more sustainable and resilient future for communities worldwide. This if used properly can ensure a great management of country as a whole.
+- **Graph Representation:**  
+  - Nodes: Key locations/intersections  
+  - Edges: Roads, weighted by traffic, road quality, weather, and safety
+
+- **GNN Framework:**  
+  - Utilizes Graph Convolutional Networks (GCN) to process graph data  
+  - Edge weights dynamically updated with real-time IoT and traffic data
+
+- **Optimization Parameters:**  
+  - Traffic congestion (real-time data)
+  - Road conditions (IoT sensors)
+  - Weather (API integration)
+  - Safety metrics (accident history, lighting, police proximity)
+
+- **Model Training:**  
+  - Trained on historical data for optimal route prediction  
+  - Features: road safety indices, average travel time, historical traffic patterns
+
+- **Dynamic Path Updates:**  
+  - Reinforcement learning (RL) adjusts routes in real time based on changing conditions
+
+#### Technical Workflow
+
+1. **Data Collection:**  
+   Real-time data from IoT devices, cameras, and APIs
+2. **Graph Construction:**  
+   Weighted graph generation from collected data
+3. **Model Development:**  
+   Implementation using PyTorch Geometric or DGL, with RL agent for edge weight tuning
+4. **Prediction & Routing:**  
+   GNN model predicts optimal routes, integrated into a user-friendly interface
+
+#### Women's Safety Extension
+
+- **Dedicated Safety Score:**  
+  - Crime rate
+  - Lighting conditions
+  - Public transport availability
+  - Proximity to emergency services
+
+Routes with higher safety scores are prioritized for female travelers, ensuring both efficiency and safety.
+
+#### Applications
+
+- Urban transport optimization
+- Emergency route planning
+- Safe routes for vulnerable populations
+
+#### Visualization
+
+<img src="https://github.com/Lord3008/Sustainify/blob/main/Output_Images/Transport_traffic_Graph.png" alt="Weighted graph showing traffic" width="900" height="600">
+
+*The visualization highlights traffic congestion, road conditions, and other factors, demonstrating the system's real-time decision-making capabilities.*
+
+---
+
+### B. For Authorities
+
+- 🌬️ **Air:**  
+  Predictive models for AQI (Air Quality Index) and trend analysis, with actionable recommendations for air quality improvement.
+
+- ⚡ **Energy:**  
+  Models to forecast national energy usage, supporting smart energy management and resource planning.
+
+---
+
+## Achievements
+
+🏆 **Best MathWorks Award** by MLH and MathWorks at HackNITR 5.0 for the project "Sustainability Bites".
+
+---
+
+## Impact 🌟
+
+Sustainify aims to:
+
+- Reduce food waste
+- Improve air quality
+- Enhance energy planning
+
+By leveraging data and AI, Sustainify contributes to a more sustainable and resilient future for communities worldwide.
+
+---
