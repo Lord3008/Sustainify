@@ -10,7 +10,8 @@ const tools = [
     title: "AQI Predictor",
     description: "Predict air quality index for the next 24-48 hours",
     color: "bg-gradient-to-br from-blue-50 to-cyan-50 border-blue-200 hover:border-blue-300",
-    iconColor: "text-blue-600"
+    iconColor: "text-blue-600",
+    href: "https://airanalysis.streamlit.app/"
   },
   {
     icon: Wind,
