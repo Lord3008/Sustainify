@@ -10,3 +10,4 @@ ultralytics
 seaborn
 matplotlib
 scikit-learn
+dotenv
