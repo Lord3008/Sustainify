@@ -1,14 +1,14 @@
-
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Upload, Camera, BarChart } from "lucide-react";
+import { Upload, Camera } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 
 const TrafficDetection = () => {
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [analysisResult, setAnalysisResult] = useState<string | null>(null);
+  const [annotatedImage, setAnnotatedImage] = useState<string | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -16,6 +16,7 @@ const TrafficDetection = () => {
     if (file) {
       setSelectedImage(file);
       setAnalysisResult(null);
+      setAnnotatedImage(null);
     }
   };
 
@@ -38,13 +39,16 @@ const TrafficDetection = () => {
       if (response.ok) {
         const result = await response.json();
         setAnalysisResult(result.suggestions);
+        setAnnotatedImage(result.annotated_image);
       } else {
         // Fallback dummy response
         setAnalysisResult("Traffic analysis complete: 15 cars detected, moderate congestion. Suggestion: Consider alternative routes during peak hours.");
+        setAnnotatedImage(null);
       }
     } catch (error) {
       // Dummy response for demonstration
       setAnalysisResult("Traffic analysis complete: 15 cars detected, moderate congestion. Suggestion: Consider alternative routes during peak hours.");
+      setAnnotatedImage(null);
     }
     
     setIsAnalyzing(false);
@@ -100,11 +104,52 @@ const TrafficDetection = () => {
                 )}
                 
                 {analysisResult && (
-                  <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-left">
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-left mb-6">
                     <h4 className="text-lg font-semibold text-green-800 mb-2">Analysis Result:</h4>
                     <p className="text-green-700">{analysisResult}</p>
                   </div>
                 )}
+                
+                {selectedImage && annotatedImage && (
+                  <div className="mb-8 flex flex-col md:flex-row gap-8 justify-center items-center">
+                    <div>
+                      <h4 className="text-lg font-semibold text-blue-800 mb-2">Uploaded Image:</h4>
+                      <img
+                        src={URL.createObjectURL(selectedImage)}
+                        alt="Uploaded"
+                        style={{ display: 'block', margin: '0 auto', maxWidth: '350px', maxHeight: 350, borderRadius: '8px', border: '2px solid #ddd' }}
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-blue-800 mb-2">Annotated Image:</h4>
+                      <img
+                        src={`data:image/png;base64,${annotatedImage}`}
+                        alt="Annotated Traffic"
+                        style={{ display: 'block', margin: '0 auto', maxWidth: '350px', maxHeight: 350, borderRadius: '8px', border: '2px solid #3b82f6' }}
+                      />
+                    </div>
+                  </div>
+                )}
+                {/* If only annotated image is available (for fallback) */}
+                {!selectedImage && annotatedImage && (
+                  <div className="mb-8">
+                    <h4 className="text-lg font-semibold text-blue-800 mb-2">Annotated Image:</h4>
+                    <img
+                      src={`data:image/png;base64,${annotatedImage}`}
+                      alt="Annotated Traffic"
+                      style={{ display: 'block', margin: '0 auto', maxWidth: '80%', maxHeight: 500, borderRadius: '8px', border: '2px solid #3b82f6' }}
+                    />
+                  </div>
+                )}
+                
+                {/* Traffic Flow and Intensity Section */}
+                <div className="mt-10">
+                  <h4 className="text-xl font-semibold text-blue-800 mb-4">Traffic Flow and Intensity Over Time</h4>
+                  <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+                    <img src="/newplot.png" alt="Traffic Flow" style={{ maxWidth: '100%', maxHeight: 350, borderRadius: 8, border: '1px solid #ddd' }} />
+                    <img src="/newplot2.png" alt="Traffic Intensity" style={{ maxWidth: '100%', maxHeight: 350, borderRadius: 8, border: '1px solid #ddd' }} />
+                  </div>
+                </div>
               </div>
             </CardContent>
           </Card>

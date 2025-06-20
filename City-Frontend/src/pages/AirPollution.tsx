@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Wind, BarChart, MapPin, AlertTriangle } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -18,21 +17,24 @@ const tools = [
     title: "Air Quality Analyzer",
     description: "Analyze current air quality data and trends",
     color: "bg-gradient-to-br from-green-50 to-emerald-50 border-green-200 hover:border-green-300",
-    iconColor: "text-green-600"
+    iconColor: "text-green-600",
+    href: "https://example.com/air-quality-analyzer"
   },
   {
     icon: MapPin,
     title: "Pollution Mapper",
     description: "Interactive map showing pollution hotspots",
     color: "bg-gradient-to-br from-purple-50 to-indigo-50 border-purple-200 hover:border-purple-300",
-    iconColor: "text-purple-600"
+    iconColor: "text-purple-600",
+    href: "https://example.com/pollution-mapper"
   },
   {
     icon: AlertTriangle,
     title: "Health Alerts",
     description: "Get notifications about air quality health risks",
     color: "bg-gradient-to-br from-red-50 to-pink-50 border-red-200 hover:border-red-300",
-    iconColor: "text-red-600"
+    iconColor: "text-red-600",
+    href: "https://example.com/health-alerts"
   }
 ];
 
@@ -52,24 +54,37 @@ const AirPollution = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {tools.map((tool, index) => (
-            <Card 
-              key={index}
-              className={`${tool.color} hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer group border-2`}
-            >
-              <CardContent className="p-8">
-                <div className={`w-20 h-20 rounded-2xl bg-white shadow-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <tool.icon className={`w-10 h-10 ${tool.iconColor}`} />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  {tool.title}
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {tool.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
+          {tools.map((tool, index) => {
+            const CardInner = (
+              <Card 
+                key={index}
+                className={`${tool.color} hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer group border-2`}
+              >
+                <CardContent className="p-8">
+                  <div className={`w-20 h-20 rounded-2xl bg-white shadow-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <tool.icon className={`w-10 h-10 ${tool.iconColor}`} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    {tool.title}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    {tool.description}
+                  </p>
+                </CardContent>
+              </Card>
+            );
+            return (
+              <a
+                key={index}
+                href={tool.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+              >
+                {CardInner}
+              </a>
+            );
+          })}
         </div>
         
         <div className="text-center mt-12">
